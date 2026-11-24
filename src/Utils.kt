@@ -6,7 +6,12 @@ import kotlin.io.path.readText
 /**
  * Reads lines from the given input txt file.
  */
-fun readInput(name: String) = Path("data/$name.txt").readText().trim().lines()
+fun readInput(day: Int, year: Int = 26, test: Boolean = false) : List<String>  {
+    val dir = if (year == 26) "" else "$year/"
+    val suffix = if (test) "_test" else ""
+    val name = "Day${day.toString().padStart(2, '0')}"
+    return Path("data/$dir$name$suffix.txt").readText().trim().lines()
+}
 
 /**
  * Converts string to md5 hash.
