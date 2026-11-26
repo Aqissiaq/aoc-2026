@@ -41,7 +41,7 @@ fun main() {
 
     val testInput = readInput(2, 2025, true).first().split(",")
     check(part1(testInput) == 1227775554.toLong())
-    //check(part2(testInput) == 6)
+    check(part2(testInput) == 4174379265)
 
     val input = readInput(2, 2025).first().split(",")
     part1(input).println()
